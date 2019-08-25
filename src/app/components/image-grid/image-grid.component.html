@@ -1,0 +1,14 @@
+<div class="heading">Image Grid</div>
+<div [ngClass]="{'spinner': loader}"></div>
+<section class="head-container">
+  <section class="glry-container">
+    <div *ngFor="let image of imageList">
+      <img
+        data-src="https://farm{{image.farm}}.staticflickr.com/{{image.server}}/{{image.id}}_{{image.secret}}.jpg"
+        alt="{{image.title}}"
+        title="{{image.title}}"
+      />
+      <p>{{image.title}}</p>
+    </div>
+  </section>
+</section>

@@ -1,0 +1,90 @@
+img {
+  height: 250px;
+  width: 250px;
+  border: 1px solid #dedede;
+}
+.search-results {
+  height: 20rem;
+  overflow: scroll;
+}
+.heading {
+  text-align: center;
+  font: 2em sans-serif;
+}
+.glry-container {
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  text-align: center;
+}
+.head-container {
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.spinner {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  margin: 10em 42em;
+}
+
+/* Safari */
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+/*Css for Low resolution devices like Iphone,Ipad*/
+@media (min-width: 320px) and (max-width: 480px) {
+  .glry-container {
+    grid-template-columns: 50% 50%;
+  }
+  img {
+    height: 150px;
+    width: 150px;
+  }
+  .spinner {
+    margin: 10em 7em;
+  }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+  .glry-container {
+    grid-template-columns: 50% 50%;
+  }
+  img {
+    height: 150px;
+    width: 150px;
+  }
+  .spinner {
+    margin: 10em 7em;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .glry-container {
+    grid-template-columns: 33% 33% 33%;
+  }
+  img {
+    height: 220px;
+    width: 225px;
+  }
+  .spinner {
+    margin: 10em 19em;
+  }
+}
+@media (min-width: 1024px) and (max-width: 1366px) {
+  .glry-container {
+    grid-template-columns: 25% 25% 25% 25%;
+  }
+  .spinner {
+    margin: 10em 27em;
+  }
+}
